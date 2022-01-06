@@ -38,8 +38,8 @@ const Navigation = () => {
           <Box sx={{ alignSelf: "flex-start" }}>
             <NavLink to="/home">
               <img
-                style={{ width: "100px", height: "50px" }}
-                src="https://www.freepnglogos.com/uploads/xiaomi-png/xiaomi-logo-logos-marcas-8.png"
+                style={{ width: "100px", height: "80px" }}
+                src="https://i.ibb.co/yPCncsc/depositphotos-125022518-stock-illustration-m-letter-logo-template.png"
                 alt=""
               />
             </NavLink>
