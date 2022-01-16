@@ -37,11 +37,11 @@ const Navigation = () => {
         >
           <Box sx={{ alignSelf: "flex-start" }}>
             <NavLink to="/home">
-              <img
+              {/* <img
                 style={{ width: "100px", height: "80px" }}
                 src="https://i.ibb.co/yPCncsc/depositphotos-125022518-stock-illustration-m-letter-logo-template.png"
                 alt=""
-              />
+              /> */}
             </NavLink>
           </Box>
           <Box
