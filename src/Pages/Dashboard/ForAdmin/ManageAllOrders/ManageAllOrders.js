@@ -7,35 +7,37 @@ const ManageAllProducts = () => {
   const [isShipped, setIsShipped] = useState(false);
   const [isDeleted, setIsDeleted] = useState(false);
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
-      .then(res => res.json())
-      .then(data => setAllOrders(data))
+    fetch("https://mi-phone-shop-2axr.vercel.app/orders")
+      .then((res) => res.json())
+      .then((data) => setAllOrders(data));
   }, [isShipped, isDeleted]);
   const handleShipping = (id) => {
-    fetch(`http://localhost:5000/orders?id=${id}`, {
-      method: 'PUT',
-      headers: { "content-type": "application/json" }
+    fetch(`https://mi-phone-shop-2axr.vercel.app/orders?id=${id}`, {
+      method: "PUT",
+      headers: { "content-type": "application/json" },
     })
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         if (data.modifiedCount) {
-          alert("status changed successfully")
-          setIsShipped(!isShipped)
+          alert("status changed successfully");
+          setIsShipped(!isShipped);
         }
-      })
-  }
+      });
+  };
   const handleDeleteOrder = (id) => {
     // eslint-disable-next-line no-restricted-globals
-    const confirmation = confirm("Are you sure you want to delete this users order?");
+    const confirmation = confirm(
+      "Are you sure you want to delete this users order?"
+    );
     if (confirmation) {
-      fetch(`http://localhost:5000/orders/${id}`, {
+      fetch(`https://mi-phone-shop-2axr.vercel.app/orders/${id}`, {
         method: "DELETE",
         headers: { "content-type": "application/json" },
       })
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount) {
-            setIsDeleted(!isDeleted)
+            setIsDeleted(!isDeleted);
           }
         });
     }

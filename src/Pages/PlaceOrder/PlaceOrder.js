@@ -14,7 +14,7 @@ const PlaceOrder = () => {
   const { id } = useParams();
   const [orderedProduct, setOrderedProduct] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${id}`)
+    fetch(`https://mi-phone-shop-2axr.vercel.app/products/${id}`)
       .then((res) => res.json())
       .then((data) => {
         const { _id, ...rest } = data;
@@ -24,7 +24,7 @@ const PlaceOrder = () => {
   console.log(orderedProduct);
   const onSubmit = (data) => {
     let newData = { ...data, ...orderedProduct, status: "pending" };
-    fetch("http://localhost:5000/orders", {
+    fetch("https://mi-phone-shop-2axr.vercel.app/orders", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newData),

@@ -10,25 +10,27 @@ const ManageProducts = () => {
     fontWeight: "600",
   };
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://mi-phone-shop-2axr.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [isDeleted]);
   const handleDeleteProduct = (id) => {
     // eslint-disable-next-line no-restricted-globals
-    const confirmation = confirm("Are you sure you want to delete the product ?")
+    const confirmation = confirm(
+      "Are you sure you want to delete the product ?"
+    );
     if (confirmation) {
-      fetch(`http://localhost:5000/products/${id}`, {
-        method: 'DELETE',
+      fetch(`https://mi-phone-shop-2axr.vercel.app/products/${id}`, {
+        method: "DELETE",
       })
         .then((res) => res.json())
-        .then(data => {
+        .then((data) => {
           if (data.deletedCount) {
-            setIsDeleted(!isDeleted)
+            setIsDeleted(!isDeleted);
           }
-        })
+        });
     }
-  }
+  };
 
   return (
     <Container sx={{ my: 10 }}>
