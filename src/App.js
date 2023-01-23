@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Register from "./Pages/Register/Register";
 import Login from "./Pages/Login/Login";
 import AuthProvider from "./Context/AuthProvider";
-import PrivateRoute from "./Pages/Shared/PrivateRoute/PrivateRoute";
+// import PrivateRoute from "./Pages/Shared/PrivateRoute/PrivateRoute";
 import ProductDetailPage from "./Pages/ProductDetail/ProductDetailPage/ProductDetailPage";
 import NotFound from "./Pages/Shared/NotFound/NotFound";
 import PlaceOrder from "./Pages/PlaceOrder/PlaceOrder";
