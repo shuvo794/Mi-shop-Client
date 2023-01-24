@@ -5,7 +5,7 @@ import Product from "../../Shared/product/product";
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://mi-phone-shop-2axr.vercel.app/products")
+    fetch("https://mi-phone-shop.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

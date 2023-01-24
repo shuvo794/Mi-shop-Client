@@ -7,12 +7,12 @@ const ManageAllProducts = () => {
   const [isShipped, setIsShipped] = useState(false);
   const [isDeleted, setIsDeleted] = useState(false);
   useEffect(() => {
-    fetch("https://mi-phone-shop-2axr.vercel.app/orders")
+    fetch("https://mi-phone-shop.vercel.app/orders")
       .then((res) => res.json())
       .then((data) => setAllOrders(data));
   }, [isShipped, isDeleted]);
   const handleShipping = (id) => {
-    fetch(`https://mi-phone-shop-2axr.vercel.app/orders?id=${id}`, {
+    fetch(`https://mi-phone-shop.vercel.app/orders?id=${id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
     })
@@ -30,7 +30,7 @@ const ManageAllProducts = () => {
       "Are you sure you want to delete this users order?"
     );
     if (confirmation) {
-      fetch(`https://mi-phone-shop-2axr.vercel.app/orders/${id}`, {
+      fetch(`https://mi-phone-shop.vercel.app/orders/${id}`, {
         method: "DELETE",
         headers: { "content-type": "application/json" },
       })

@@ -89,7 +89,7 @@ const useFirebase = () => {
       if (user) {
         setUser(user);
         setAdminLoading(true);
-        fetch(`https://mi-phone-shop-2axr.vercel.app/users/${user?.email}`)
+        fetch(`https://mi-phone-shop.vercel.app/users/${user?.email}`)
           .then((res) => res.json())
           .then((data) => setAdmin(data.admin))
           .finally(() => setAdminLoading(false));
@@ -103,7 +103,7 @@ const useFirebase = () => {
   // save the registered use to the mongo database
   const saveUserToDB = (name, email) => {
     const user = { name, email };
-    fetch("https://mi-phone-shop-2axr.vercel.app/users", {
+    fetch("https://mi-phone-shop.vercel.app/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

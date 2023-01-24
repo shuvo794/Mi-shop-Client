@@ -10,7 +10,7 @@ const ManageProducts = () => {
     fontWeight: "600",
   };
   useEffect(() => {
-    fetch("https://mi-phone-shop-2axr.vercel.app/products")
+    fetch("https://mi-phone-shop.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [isDeleted]);
@@ -20,7 +20,7 @@ const ManageProducts = () => {
       "Are you sure you want to delete the product ?"
     );
     if (confirmation) {
-      fetch(`https://mi-phone-shop-2axr.vercel.app/products/${id}`, {
+      fetch(`https://mi-phone-shop.vercel.app/products/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

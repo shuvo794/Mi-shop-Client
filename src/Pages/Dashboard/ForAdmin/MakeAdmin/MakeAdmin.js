@@ -6,7 +6,7 @@ const MakeAdmin = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     const user = { email: data.email };
-    fetch("https://mi-phone-shop-2axr.vercel.app/users/admin", {
+    fetch("https://mi-phone-shop.vercel.app/users/admin", {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(user),

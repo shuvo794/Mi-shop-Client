@@ -12,7 +12,7 @@ const Review = () => {
     fontWeight: 600,
   };
   const onSubmit = (data) => {
-    fetch("https://mi-phone-shop-2axr.vercel.app/reviews", {
+    fetch("https://mi-phone-shop.vercel.app/reviews", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
